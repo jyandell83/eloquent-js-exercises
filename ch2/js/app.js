@@ -38,3 +38,29 @@ for (let i = 1; i <= 100; i++)  {
 
 // When you have a program that generates this pattern, define a binding size = 8 and change the program so that it works for any size, outputting a grid of the given width and height.
 
+let chessboard = '';
+let size = 20;
+for (let j = 1; j <= size; j++) {
+    chessboard += '\n';
+    if (j % 2 !== 0) {
+        for (let i = 1; i <= size; i++)  {
+            if (i % 2 == 0) {
+                chessboard += '#';
+            }
+            else {
+                chessboard += ' ';
+            }
+        }
+    }
+    else {
+        for (let i = 1; i <= size; i++)  {
+            if (i % 2 == 0) {
+                chessboard += ' ';
+            }
+            else {
+                chessboard += '#';
+            }
+        }
+    }
+}
+console.log(chessboard);
