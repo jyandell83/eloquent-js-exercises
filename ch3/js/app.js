@@ -46,4 +46,4 @@ const countChar = (str, char) =>  {
 };
 const countBs = (str) =>  {
     return countChar(str, "B");
-};
+};     
