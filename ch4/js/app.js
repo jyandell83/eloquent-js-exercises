@@ -28,3 +28,19 @@ const sum = (someArray) =>  {
 };
 
 // Arrays have a reverse method that changes the array by inverting the order in which its elements appear. For this exercise, write two functions, reverseArray and reverseArrayInPlace. The first, reverseArray, takes an array as argument and produces a new array that has the same elements in the inverse order. The second, reverseArrayInPlace, does what the reverse method does: it modifies the array given as argument by reversing its elements. Neither may use the standard reverse method.
+const reverseArray = (someArr)  =>  {
+    let newArr = [];
+    for (let i = someArr.length - 1; i >= 0; i--)  {
+        newArr.push(someArr[i]);
+    }
+    return newArr;
+}
+
+const reverseArrayInPlace = (someArr)  =>  {
+    for (let i = 0; i <= Math.floor((someArr.length)/2); i++)  {
+        let num = someArr[i];
+        someArr[i] = someArr[someArr.length - (i + 1)];
+        someArr[someArr.length - (i + 1)] = num;
+    }
+    return someArr;
+}
